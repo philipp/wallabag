@@ -723,6 +723,9 @@ class Poche
                 break;
         }
 
+ $tpl_vars['user_name'] = $this->user->name;
+ $tpl_vars['app_name'] = "wallaBg";
+ 
         return $tpl_vars;
     }
 
@@ -877,7 +880,7 @@ class Poche
                 $longlastingsession = isset($_POST['longlastingsession']);
                 $passwordTest = ($isauthenticated) ? $user['password'] : Tools::encodeString($password . $login);
                 Session::login($user['username'], $user['password'], $login, $passwordTest, $longlastingsession, array('poche_user' => new User($user)));
-                $this->messages->add('s', _('welcome to your wallabag'));
+                $this->messages->add('s', _('welcome to your wallabag, ' . $login));
                 Tools::logm('login successful');
                 Tools::redirect($referer);
             }
