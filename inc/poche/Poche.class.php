@@ -723,8 +723,7 @@ class Poche
                 break;
         }
 
- $tpl_vars['user_name'] = $this->user->name;
- $tpl_vars['app_name'] = "wallaBg";
+        $tpl_vars['user_name'] = $this->user->name;
  
         return $tpl_vars;
     }

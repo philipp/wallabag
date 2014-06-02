@@ -8,6 +8,8 @@
  * @license    http://www.wtfpl.net/ see COPYING file
  */
 
+@define ('APP_NAME', 'wallabag');
+
 @define ('SALT', ''); # put a strong string here
 @define ('LANG', 'en_EN.utf8');
 
